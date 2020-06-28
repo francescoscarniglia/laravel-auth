@@ -21,10 +21,10 @@
                     <td>{{ $post->title }}</td>
                     <td>{{ $post->body }}</td>
                     <td>{{ $post->created_at }}</td>
-                    <td>{{ $post->update_at }}</td>
+                    <td>{{ $post->updated_at }}</td>
 
                     <td>
-                        <a class="btn btn-info" href=""> Edit </a>
+                        <a class="btn btn-info" href="{{ route('admin.posts.edit', $post->id) }}"> Edit </a>
                     </td>
 
                     <td>

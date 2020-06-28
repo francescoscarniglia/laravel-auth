@@ -21,12 +21,12 @@
         @method('POST')
 
         <div class="form-group">
-          <label for="title"></label>
+          <label for="title">Title</label>
           <input class="form-control" type="text" id="title" name="title" value="{{ old('title') }}">
         </div>
 
         <div class="form-group">
-            <label for="body"></label>
+            <label for="body">Body</label>
             <textarea class="form-control"  rows="10" id="body" name="body"> {{ old('body') }}</textarea>
         </div>
 
