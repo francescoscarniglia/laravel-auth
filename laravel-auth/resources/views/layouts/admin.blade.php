@@ -14,7 +14,7 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item">
-                            <a href=" {{ route('admin.posts.index') }} " class="nav-link"> Post archive</a>
+                            <a href=" {{ route('admin.posts.index') }} " class="nav-link"> Blog archive</a>
                             </li>
                             <li><a href=" {{ route('home') }} " class="nav-link"> View site</a></li>
                     </ul>
