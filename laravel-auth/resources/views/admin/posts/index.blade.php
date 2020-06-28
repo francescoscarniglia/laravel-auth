@@ -26,8 +26,8 @@
                 <tr>
                     <td>{{ $post->id }}</td>
                     <td>{{ $post->title }}</td>
-                    <td>{{ $post->created_at }}</td>
-                    <td>{{ $post->updated_at }}</td>
+                    <td>{{ $post->created_at->format('d/m/Y - H:i')  }}</td>
+                    <td>{{ $post->updated_at->format('d/m/Y - H:i') }}</td>
                     <td>
                     <a class="btn btn-success" href="{{ route('admin.posts.show', $post->id) }}"> Show </a>
                     </td>
