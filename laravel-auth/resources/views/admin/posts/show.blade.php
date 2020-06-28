@@ -21,7 +21,7 @@
                     <td>{{ $post->title }}</td>
                     <td>{{ $post->body }}</td>
                     <td>{{ $post->created_at->format('d/m/Y - H:i')  }}</td>
-                    <td>{{ $post->updated_at->format('d/m/Y - H:i')  }}</td>
+                    <td>{{ $post->updated_at->diffForHumans()   }}</td>
 
                     <td>
                         <a class="btn btn-info" href="{{ route('admin.posts.edit', $post->id) }}"> Edit </a>
