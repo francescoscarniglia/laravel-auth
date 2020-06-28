@@ -2,6 +2,13 @@
 
 @section('content')
 <div class="container">
+    @if (session('post-deleted'))
+        <div class="alert alert-success">
+            <div> Post deleted successfully</div>
+            {{ session('post-deleted') }}
+        </div>
+    @endif
+
     <h1 class="mb-4">Blog archive</h1>
 
     <table class="table">
@@ -30,7 +37,13 @@
                     </td>
 
                     <td>
-                        <a class="btn btn-danger" href=""> Delete </a>
+                    <form action="{{ route('admin.posts.destroy', $post->id)}}" method="POST">
+                        @csrf
+                        @method('DELETE')
+
+                        <input class="btn btn-danger" type="submit" value="Delete">
+
+                        </form>
                     </td>
 
                 </tr>

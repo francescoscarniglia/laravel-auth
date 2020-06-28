@@ -108,9 +108,18 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Post $post)
     {
-        //
+        if(empty($post)){
+            abort('404');
+        }
+
+        $title = $post->title;
+        $deleted= $post->delete();
+
+        if($deleted) {
+            return redirect()->route('admin.posts.index')->with('post-deleted', $title);
+        }
     }
 
     // validation rules
