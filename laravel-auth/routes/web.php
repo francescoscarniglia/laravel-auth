@@ -19,8 +19,10 @@ Route::get('/', function () {
 
 Auth::routes();
 
-// ADMIN
+// GUEST
+Route::get('posts', 'PostController@index')->name('post.index');
 
+// ADMIN
 Route::prefix('admin')
      ->namespace('Admin')
      ->middleware('auth')
