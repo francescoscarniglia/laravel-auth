@@ -16,7 +16,9 @@
                         <li class="nav-item">
                             <a href=" {{ route('admin.posts.index') }} " class="nav-link"> Blog archive</a>
                             </li>
+                            <li><a href=" {{ route('admin.posts.create') }} " class="nav-link"> New post</a></li>
                             <li><a href=" {{ route('home') }} " class="nav-link"> View site</a></li>
+
                     </ul>
 
                     <!-- Right Side Of Navbar -->
