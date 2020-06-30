@@ -52,7 +52,7 @@
                     <h3 class="mb-4">Post image</h3>
 
                     @if (!empty($post->path_img))
-                        <img class="d-block" width="400" src="{{ asset('storage/' . $post->path_img) }}" alt="$post->title">
+                        <img class="d-block" width="800" src="{{ asset('storage/' . $post->path_img) }}" alt="$post->title">
                     @else
                         <div class="no-text-img">No-image</div>
                     @endif
