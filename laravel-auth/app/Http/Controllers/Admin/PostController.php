@@ -135,6 +135,9 @@ class PostController extends Controller
         $deleted= $post->delete();
 
         if($deleted) {
+            if (!empty($post->path_img)) {
+                Storage::disk('public')->delete($post->path_img);
+            }
             return redirect()->route('admin.posts.index')->with('post-deleted', $title);
         }
     }
