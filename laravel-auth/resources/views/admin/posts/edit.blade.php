@@ -16,7 +16,7 @@
         </div>
     @endif
 
-    <form action="{{ route('admin.posts.update', $post->id) }}" method="POST">
+    <form action="{{ route('admin.posts.update', $post->id) }}" method="POST" enctype="multipart/form-data">
         @csrf
         @method('PATCH')
 
@@ -28,6 +28,14 @@
         <div class="form-group">
             <label for="body"> Body</label>
             <textarea class="form-control"  rows="10" id="body" name="body"> {{ old('body', $post->body) }}</textarea>
+        </div>
+
+        <div class="form-group">
+            <label class="d-block" for="path_img">Upload image</label>
+            @isset($post->path_img)
+        <img src="{{ assets('storage/' . $post->path_img) }}" alt="$post->title">
+
+            @endisset
         </div>
 
         <input class="btn btn-info" type="submit" value="Edit post">
