@@ -33,9 +33,10 @@
         <div class="form-group">
             <label class="d-block" for="path_img">Upload image</label>
             @isset($post->path_img)
-                 <img src="{{ assets('storage/' . $post->path_img) }}" alt="$post->title">
+                 <img  class="d-block" width="400" src="{{ asset('storage/' . $post->path_img) }}" alt="$post->title">
             @endisset
-            <input class="form-control" type="file" id="path_img" name="path_img" accept="image/*">
+            <h6 class="text-info p-2">Change:</h6>
+            <input class="inputfile pb-2" type="file" id="path_img" name="path_img" accept="image/*">
         </div>
 
         <input class="btn btn-info" type="submit" value="Edit post">
