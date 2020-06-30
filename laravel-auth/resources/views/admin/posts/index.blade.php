@@ -16,6 +16,7 @@
             <tr>
                 <th>ID</th>
                 <th>Title</th>
+                <th>Body</th>
                 <th>Created at</th>
                 <th>Last update</th>
                 <th colspan="3"></th>
@@ -26,6 +27,7 @@
                 <tr>
                     <td>{{ $post->id }}</td>
                     <td>{{ $post->title }}</td>
+                    <td>{{ $post->body }}</td>
                     <td>{{ $post->created_at->format('d/m/Y - H:i')  }}</td>
                     <td>{{ $post->updated_at->diffForHumans() }}</td>
                     <td>
