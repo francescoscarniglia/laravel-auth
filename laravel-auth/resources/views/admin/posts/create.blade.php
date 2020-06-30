@@ -31,9 +31,10 @@
         </div>
 
         <div class="form-group">
-            <label for="path_img">Upload image</label>
-            <input class="form-control" type="file" id="path_img" name="path_img" accept="image/*">
+            <label for="path_img" class="d-block mb-2">Upload image</label>
+            <input class="inputfile pb-2" type="file" id="path_img" name="path_img" accept="image/*">
         </div>
+
 
         <input class="btn btn-info" type="submit" value="Create post">
 
